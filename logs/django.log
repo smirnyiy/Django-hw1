@@ -1,0 +1,21 @@
+[INFO    :   django.utils.autoreload] - 2024-01-22 20:08:04,999 : run_with_reloader @0668: Watching for file changes with StatReloader
+[ERROR   :            django.request] - 2024-01-22 20:08:23,363 : log_response @0241: Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Django-hw\app_1\views.py", line 23, in index
+    logger.debug('Index page requested.')
+    ^^^^^^
+NameError: name 'logger' is not defined
+[ERROR   :             django.server] - 2024-01-22 20:08:23,367 : log_message @0212: "GET / HTTP/1.1" 500 66069
+[INFO    :   django.utils.autoreload] - 2024-01-22 20:10:43,669 : trigger_reload @0266: D:\Django-hw\app_1\views.py changed, reloading.
+[INFO    :   django.utils.autoreload] - 2024-01-22 20:10:46,624 : run_with_reloader @0668: Watching for file changes with StatReloader
+[DEBUG   :               app_1.views] - 2024-01-22 20:10:48,533 : index @0023: Index page requested.
+[INFO    :             django.server] - 2024-01-22 20:10:48,534 : log_message @0212: "GET / HTTP/1.1" 200 363
+[INFO    :             django.server] - 2024-01-22 20:11:00,878 : log_message @0212: "GET /about HTTP/1.1" 301 0
+[DEBUG   :               app_1.views] - 2024-01-22 20:11:00,882 : about @0041: About page requested.
+[INFO    :             django.server] - 2024-01-22 20:11:00,883 : log_message @0212: "GET /about/ HTTP/1.1" 200 345
